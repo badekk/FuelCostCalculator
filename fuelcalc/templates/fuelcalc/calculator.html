@@ -1,0 +1,10 @@
+{% block contenct %}
+
+<form action="." method="POST">
+    {%csrf_token%}
+    {{ form.as_p }}
+    <button type="submit">calculate!</button>
+</form>
+<p>{% if journey_cost %}{{journey_cost}}{%endif%}</p>
+
+{% endblock %}

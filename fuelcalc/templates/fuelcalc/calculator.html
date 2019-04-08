@@ -3,8 +3,9 @@
 <form action="." method="POST">
     {%csrf_token%}
     {{ form.as_p }}
+    Journey Cost: <input type="number" name="Journey Cost" value="{{ journey_cost }}" disabled/>
     <button type="submit">calculate!</button>
 </form>
-<p>{% if journey_cost %}{{journey_cost}}{%endif%}</p>
+
 
 {% endblock %}
